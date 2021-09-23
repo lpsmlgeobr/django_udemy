@@ -3,6 +3,8 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    path("<month>",views.months)
+    path("",views.index), #/challenges/
+    path("<int:month>", views.monthly_number),
+    path("<str:month>",views.months, name="month-challenge")
 
 ]
